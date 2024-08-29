@@ -1,66 +1,65 @@
-# YouTube Video Downloader and Info API
+[![example-bun](https://github.com/koyeb/example-bun/actions/workflows/deploy.yaml/badge.svg)](https://github.com/koyeb/example-bun/actions)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<div align="center">
+  <a href="https://koyeb.com">
+    <img src="https://www.koyeb.com/static/images/icons/koyeb.svg" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Koyeb Serverless Platform</h3>
+  <p align="center">
+    Deploy a Bun application on Koyeb
+    <br />
+    <a href="https://koyeb.com">Learn more about Koyeb</a>
+    ·
+    <a href="https://koyeb.com/docs">Explore the documentation</a>
+    ·
+    <a href="https://koyeb.com/tutorials">Discover our tutorials</a>
+  </p>
+</div>
 
-## Description
-The YouTube Video Downloader and Info API is a Flask-based Python project that allows you to download YouTube videos and retrieve video information using Pytube. This versatile tool provides two main functionalities:
+## About Koyeb and the Bun application
 
-1. **Download Video:** You can specify the video URL and resolution to download YouTube videos directly to your local machine.
+Koyeb is a developer-friendly serverless platform to deploy apps globally. No-ops, servers, or infrastructure management.
+This repository contains a Bun application you can deploy on the Koyeb serverless platform for testing.
 
-2. **Get Video Info:** You can retrieve detailed information about a YouTube video, including its title, author, length, views, description, and publish date.
+This example application is designed to show how a Bun application can be deployed on Koyeb.
 
-This project is designed to simplify the process of interacting with YouTube content programmatically.
+## Getting Started
 
-## Features
-- Download YouTube videos in various resolutions.
-- Retrieve comprehensive information about YouTube videos.
-- Error handling for reliable performance.
-- JSON API endpoints for easy integration into other applications.
+Follow the steps below to deploy and run the Bun on your Koyeb account.
 
-## Libraries and Technologies Used
-- Python 3.x
-- Flask for building the API.
-- Pytube for interacting with YouTube content.
-- re for URL validation.
+### Requirements
 
-## Usage
-1. Clone this repository: `git clone https://github.com/zararashraf/youtube-video-downloader-api.git`
-2. Install the required libraries: `pip install flask pytube`
-3. Run the Flask application: `python main.py`
-4. Access the API endpoints using HTTP requests (e.g., POST requests in Postman).
+You need a Koyeb account to successfully deploy and run this application. If you don't already have an account, you can sign-up for free [here](https://app.koyeb.com/auth/signup).
 
-## API Endpoints
+### Deploy using the Koyeb button
 
-### Download Video by Resolution
-- **Endpoint:** `/download/<resolution>`
-- **HTTP Method:** POST
-- **Request Body:** JSON
-    ```json
-    {
-        "url": "https://www.youtube.com/watch?v=VIDEO_ID"
-    }
-    ```
+The fastest way to deploy the Bun application is to click the **Deploy to Koyeb** button below.
 
-### Get Video Info
-- **Endpoint:** `/video_info`
-- **HTTP Method:** POST
-- **Request Body:** JSON
-    ```json
-    {
-        "url": "https://www.youtube.com/watch?v=VIDEO_ID"
-    }
-    ```
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=bun-on-koyeb&type=git&repository=koyeb/example-bun&branch=main&env[PORT]=3000&ports=3000;http;/&builder=dockerfile)
 
-## Screenshots
-### Downloading a Video
-![image](https://github.com/zararashraf/youtube-video-downloader-api/assets/36181292/edad60c8-27fc-4ed0-8243-21ffc4cc16cc)
+Clicking on this button brings you to the Koyeb App creation page with everything pre-set to launch this application.
 
-### Retrieving Info
-![image](https://github.com/zararashraf/youtube-video-downloader-api/assets/36181292/e0e3aeb3-fa97-41c7-9d89-971f2cda421e)
+_To modify this application example, you will need to fork this repository. Checkout the [fork and deploy](#fork-and-deploy-to-koyeb) instructions._
 
+### Fork and deploy to Koyeb
 
-## Code Repository
-You can access the source code for this project on [GitHub](https://github.com/zararashraf/youtube-video-downloader-api/blob/main/main.py).
+If you want to customize and enhance this application, you need to fork this repository.
 
-## License
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the code while providing appropriate attribution.
+If you used the **Deploy to Koyeb** button, you can simply link your service to your forked repository to be able to push changes.
+Alternatively, you can manually create the application as described below.
+
+On the [Koyeb Control Panel](https://app.koyeb.com/), on the **Overview** tab, click the **Create Web Service** button to begin.
+
+1. Select **GitHub** as the deployment method.
+2. In the repositories list, select the repository you just forked.
+3. Choose a name for your App and Service, i.e `bun-on-koyeb`, and click **Deploy**.
+
+Once the build is completed, your application is being deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
+
+## Contributing
+
+If you have any questions, ideas or suggestions regarding this application sample, feel free to open an [issue](//github.com/koyeb/example-bun/issues) or fork this repository and open a [pull request](//github.com/koyeb/example-bun/pulls).
+
+## Contact
+
+[Koyeb](https://www.koyeb.com) - [@gokoyeb](https://twitter.com/gokoyeb) - [Slack](http://slack.koyeb.com/) - [Community](https://community.koyeb.com/)
